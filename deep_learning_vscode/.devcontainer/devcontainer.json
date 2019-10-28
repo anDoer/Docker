@@ -13,9 +13,9 @@
 	// You can edit these settings after create using File > Preferences > Settings > Remote.
 	"settings": { 
 		"terminal.integrated.shell.linux": "/bin/bash",
-		"python.pythonPath": "/root/miniconda3/bin/python",
+		"python.pythonPath": "/home/vscode/miniconda3/bin/python",
 		"python.linting.pylintEnabled": true,
-		"python.linting.pylintPath": "/root/miniconda3/bin/pylint",
+		"python.linting.pylintPath": "/home/vscode/miniconda3/bin/pylint",
 		"python.linting.enabled": true
 	},
 

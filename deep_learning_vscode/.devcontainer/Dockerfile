@@ -16,7 +16,9 @@ RUN apt-get install -y \
 	wget \
 	curl \
 	htop \
-   	git
+   	git \
+	autopep8 \
+	opencv
 
  # Create a non-root user to use if preferred - see https://aka.ms/vscode-remote/containers/non-root-user.
 RUN groupadd --gid $USER_GID $USERNAME
@@ -26,6 +28,8 @@ RUN apt-get install -y sudo
 RUN echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME
 RUN chmod 0440 /etc/sudoers.d/$USERNAME
 
+USER $USERNAME
+WORKDIR /home/$USERNAME
 
 RUN curl -O https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 
